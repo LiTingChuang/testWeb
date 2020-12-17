@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fir-b06a5": {
+      "hosting": {
+        "MyCRM": [
+          "fir-b06a5"
+        ]
+      }
+    }
+  }
+}
