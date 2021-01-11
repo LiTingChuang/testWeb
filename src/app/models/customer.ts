@@ -9,9 +9,9 @@ export interface Customer {
     cell_phone: string;
     // 初次接觸日期
     date_init_contact: {  
-        day: number,
-        month: number,
-        year: number
+        year: number;
+        month: number;
+        day: number;
     }; 
 }
 

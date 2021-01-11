@@ -13,6 +13,10 @@ import { CustomerDetailComponent } from './customer/customer-detail/customer-det
 import { CustomerFormComponent } from './customer/customer-form/customer-form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { ConfirmModalComponent } from './modal/confirm-modal/confirm-modal.component';
+import { AA070312listComponent } from './aa070312-list/aa070312-list.component';
+import { MemberListComponent } from './member/member-list/member-list.component';
+import { MemberFormComponent } from './member/member-form/member-form.component';
 
 
 @NgModule({
@@ -21,7 +25,11 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     CustomerListComponent,
     CustomerDetailComponent,
-    CustomerFormComponent
+    CustomerFormComponent,
+    ConfirmModalComponent,
+    AA070312listComponent,
+    MemberListComponent,
+    MemberFormComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +39,7 @@ import { FormsModule } from '@angular/forms';
     NgbModule,
     FormsModule
   ],
+  entryComponents: [ CustomerFormComponent, ConfirmModalComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })

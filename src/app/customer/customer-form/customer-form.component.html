@@ -1,1 +1,66 @@
-<p>customer-form works!</p>
+<div class="container">
+  <div class="modal-header">
+    <h4 class="modal-title">聯絡人</h4>
+  </div>
+  <!--改最多的部分-->
+  <div class="modal-body">
+    <form #cform="ngForm">
+
+      <div class="form-group">
+        <div class="row">
+          <label for="name" class="col-2 col-form-label">客戶姓名<span class="text-danger">*</span></label>
+          <!--欄位的性質要注意，後方的命名也需要更改。-->
+          <input type="text" class="col-10 form-control" [(ngModel)]="customer.name" name="name" #name="ngModel"
+            placeholder="聯絡人姓名" required>
+        </div>
+        <div *ngIf="name.dirty">
+          <span *ngIf="name.errors; then errors"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+          <label for="date" class="col-2 col-form-label">初次聯繫<span class="text-danger">*</span></label>
+          <input type="date" class="col-10 form-control" [(ngModel)]="customer.date_init_contact" name="date"
+            #date="ngModel" ngbDatepicker #d="ngbDatepicker" required>
+        </div>
+        <div *ngIf="date.dirty">
+          <span *ngIf="date.errors; then errors"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+          <label for="cell_phone" class="col-2 col-form-label">手機號碼<span class="text-danger">*</span></label>
+          <input type="text" class="col-10 form-control" [(ngModel)]="customer.cell_phone" name="phone" #phone="ngModel"
+            placeholder="10碼" required minlength="10" maxlength="10">
+        </div>
+        <div *ngIf="phone.dirty">
+          <span *ngIf="phone.errors; then phone_errors"></span>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="background" class="col-2 col-form-label">背景說明</label>
+        <textarea type="text" class="col-10 form-control" [(ngModel)]="customer.background_info" name="background"
+          placeholder="聯絡人背景, 非必要" rows="4">
+          </textarea>
+      </div>
+
+      <div class="modal-footer">
+        <small class="text-danger mr-auto">* 必填</small>
+        <button type="submit" class="btn btn-outline-primary" (click)="save()"
+          [disabled]="!cform.form.valid">儲存</button>
+        <button type="reset" class="btn btn-outline-dark">清除</button>
+        <button type="button" class="btn btn-outline-dark" (click)="active.dismiss('cancel')">取消</button>
+      </div>
+    </form>
+  </div>
+
+  <ng-template #errors>
+    <p class="text-danger">欄位未填！</p>
+  </ng-template>
+  <ng-template #phone_errors>
+    <p class="text-danger">手機號碼需10碼！</p>
+  </ng-template>
+</div>

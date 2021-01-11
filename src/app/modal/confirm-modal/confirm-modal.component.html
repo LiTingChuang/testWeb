@@ -1,0 +1,16 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-title">刪除資料</h4>
+    <button type="button" class="close" aria-describedby="modal-title" (click)="activeModal.dismiss('Cross')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p><strong>確定刪除<span class="text-primary">{{ data.name }}</span> 資料?</strong></p>
+    <p>所有該使用者的資料將永久刪除
+      <span class="text-danger">刪除動作無法回復.</span>
+    </p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" (click)="activeModal.dismiss('Cancel')">取消</button>
+    <button type="button" class="btn btn-danger" (click)="activeModal.close('DELETE')">確認</button>
+  </div>
