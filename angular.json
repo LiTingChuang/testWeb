@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "MyCRM"
+  "defaultProject": "MyCRM",
+  "cli": {
+    "analytics": false
+  }
 }

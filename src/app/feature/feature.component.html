@@ -1,0 +1,21 @@
+<section class="container text-center" id="feature-section">
+  <h1 class="display-4">記錄教主的特殊神奇時刻</h1>
+    <p> 從小到大的生活紀錄，大部分都是在吃、在咬、在睡覺。是一隻笑臉狗狗，人緣好，狗緣也好，但卻很怕狗QQ
+      <br>
+    ～這裡精選出了教主目前生活中最令人好氣好笑好可愛的時刻～ </p>
+    <!--row 控制橫列的數量-->
+    <div class="row m-4">
+        <!--col 每個橫列中有幾個直列的數量, sm=small, -sm-4 = 在small級別中的會有4個。( 可以設兩種，一種是通用的數量"col-4"，一種是有條件的"col-sm-4"。 ) -->
+      <div class="col-sm-4" *ngFor="let item of food;">
+        <div class="card">
+          <img class="card-img-top" src=" {{item.img}} " />
+          <div class="card-body">
+            <h4 class="card-title">{{ item.name }}</h4>
+            <p class="card-text">{{ item.intro }}</p>
+            <!-- <button (click)="onSelect(item)" class="btn btn-primary">選取</button> -->
+            <!-- <demo-modal-service-static [item]="item"></demo-modal-service-static> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

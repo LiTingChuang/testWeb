@@ -1,0 +1,21 @@
+<section class="container text-center" id="hero-section">
+    <div class="container">
+        <div class="jumbotron" style="background-color: #fae994;">
+            <h3 class="display-4 text-center text-dark mb-4">多多寫真特集</h3>
+            <!--carousel輪播-->
+            <!--*ngIf = if-->
+            <ngb-carousel *ngIf="scenery">
+                <!--ngbSlide就是放「多張」輪播圖片-->
+                <ng-template ngbSlide *ngFor="let slide of scenery">
+                    <div style="text-align: center;">
+                        <img [src]="slide.img" width="auto" height="450px" alt="Random first slide" >
+                        <div class="carousel-caption ">
+                            <h3>{{ slide.title }}</h3>
+                            <p>{{ slide.desc }}</p>
+                        </div>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    </div>
+</section>

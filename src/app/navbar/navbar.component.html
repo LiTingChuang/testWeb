@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #fae994;">
+    <div class="container">
+        <div class="navbar-brand">
+            <span class=""><img src="{{ logo }} "></span>
+            <span class="text-dark display-title">
+          {{title}}
+        </span>
+        </div>
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <!-- <a  *ngFor="let hrefitem of herf" href={{hrefitem}} class="text-white nav-link"> -->
+                <li class="nav-item mr-5 display-5 dropdown" *ngFor="let menuitem of menu">
+                    <a href={{menuitem.url}} class="text-dark nav-link">
+              {{menuitem.title}}
+            </a>
+                </li>
+                <!-- </a> -->
+            </ul>
+            <a class="btn btn-lg btn-outline-secondary" [routerLink]="['/member']" role="button">
+          我要入教
+        </a>
+        </div>
+    </div>
+</nav>

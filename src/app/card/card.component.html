@@ -1,0 +1,16 @@
+<div class="container text-center">
+    <div class="row m-4">
+        <!--col 每個橫列中有幾個直列的數量, sm=small, -sm-4 = 在small級別中的會有4個。( 可以設兩種，一種是通用的數量"col-4"，一種是有條件的"col-sm-4"。 ) -->
+        <div class="col-sm-4" *ngFor="let item of card;">
+            <div class="card">
+                <img class="card-img-top" src=" {{item.img}} " />
+                <div class="card-body">
+                    <h4 class="card-title">{{ item.name }}</h4>
+                    <p class="card-text">{{ item.intro }}</p>
+                    <!-- <button (click)="onSelect(item)" class="btn btn-primary">選取</button> -->
+                    <!-- <demo-modal-service-static [item]="item"></demo-modal-service-static> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

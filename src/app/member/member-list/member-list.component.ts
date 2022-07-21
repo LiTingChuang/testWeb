@@ -4,7 +4,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { MemberId, Member } from 'src/app/models/member';
 import { MemberService } from 'src/app/services/member.service';
 import { MemberFormComponent } from '../member-form/member-form.component';
-import { ConfirmModalComponent } from 'src/app/modal/confirm-modal/confirm-modal.component';
+import { Aa070312ConfirmModalComponent } from 'src/app/modal/aa070312-confirm-modal/aa070312-confirm-modal.component';
 
 @Component({
   selector: 'app-member-list',
@@ -41,7 +41,6 @@ export class MemberListComponent implements OnInit {
     this.subscription = modalRef.componentInstance.result.subscribe(
       // (回來的東西) => {程式的主體}
       (result: Member) => {
-        console.log('表單輸入資料為:', result);
         // && 前後兩個條件要成立才可以執行
         if (this.edit && cdoc) {
           this.cs.updateMember(cdoc.id, result);
@@ -66,7 +65,7 @@ export class MemberListComponent implements OnInit {
 
   // 刪除一筆客戶資料
   deleteMember(m: MemberId) {
-    const cmref = this.modal.open(ConfirmModalComponent, {
+    const cmref = this.modal.open(Aa070312ConfirmModalComponent, {
       size: 'lg'
     });
     // 將想刪除的資料傳到彈跳視窗裡面
@@ -74,7 +73,7 @@ export class MemberListComponent implements OnInit {
     cmref.result
       // 正常回來的情況
       .then(
-        (result) => {
+        result => {
           // 刪除資料
           this.cs.removeMember(m.id);
         }

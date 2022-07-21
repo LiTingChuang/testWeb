@@ -17,6 +17,14 @@ import { ConfirmModalComponent } from './modal/confirm-modal/confirm-modal.compo
 import { AA070312listComponent } from './aa070312-list/aa070312-list.component';
 import { MemberListComponent } from './member/member-list/member-list.component';
 import { MemberFormComponent } from './member/member-form/member-form.component';
+import { CardComponent } from './card/card.component';
+import { ContactComponent } from './contact/contact.component';
+import { FeatureComponent } from './feature/feature.component';
+import { HeroComponent } from './hero/hero.component';
+import { JumboComponent } from './jumbo/jumbo.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ProductComponent } from './product/product.component';
+import { Aa070312ConfirmModalComponent } from './modal/aa070312-confirm-modal/aa070312-confirm-modal.component';
 
 
 @NgModule({
@@ -29,7 +37,15 @@ import { MemberFormComponent } from './member/member-form/member-form.component'
     ConfirmModalComponent,
     AA070312listComponent,
     MemberListComponent,
-    MemberFormComponent
+    MemberFormComponent,
+    CardComponent,
+    ContactComponent,
+    FeatureComponent,
+    HeroComponent,
+    JumboComponent,
+    NavbarComponent,
+    ProductComponent,
+    Aa070312ConfirmModalComponent
   ],
   imports: [
     BrowserModule,

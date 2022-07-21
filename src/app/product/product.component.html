@@ -1,0 +1,19 @@
+<section class="container-fluid text-center" id="product-section">
+  <div class=" my-4  border">
+    <br>
+    <h1 class="display-4">簡介・多多</h1>
+    <p>關於多多教主的一切都在這裡 !</p>
+    <div class="row">
+      <div class="col-md-3 text-center my-auto h-100" *ngFor="let item of products">
+        <!--盒子設定：d-block, 搭配my-auto（垂直至中）; my間隔大小-->
+        <!--d-block	塊狀容器，大小以空間判定，可設定寬高、上下外距等屬性-->
+        <!--"https://blog.poychang.net/visible-and-hidden-in-bootstrap-4/"-->
+        <img class="d-block mx-auto my-4" src="{{ item.img }}">
+        <!--display 調整文字大小-->
+        <h1 class="display-5  my-4"> {{ item.title }} </h1>
+        <p class="my-4"> {{item.desc}} </p>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>

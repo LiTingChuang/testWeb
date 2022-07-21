@@ -14,6 +14,7 @@ export class MemberFormComponent implements OnInit {
   // @Output() result: EventEmitter = new EventEmitter();
   @Output() result: EventEmitter<Member> = new EventEmitter<Member>();
 
+
   member: Member = {  // 儲存表單各位欄位的資料,供表單ngModel使用
     name: '',
     bitrh: { day: 0, month: 0, year: 0 },

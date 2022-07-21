@@ -1,0 +1,9 @@
+#dodoPhoto {
+    position: relative;
+    background: #000 url("/assets/dodo.JPG") center center;
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    overflow: auto;
+    margin-top: 0px;
+}

@@ -41,7 +41,6 @@ export class CustomerListComponent implements OnInit {
     this.subscription = modalRef.componentInstance.result.subscribe(
       // (回來的東西) => {程式的主體}
       (result: Customer) => {
-        console.log('表單輸入資料為:', result);
         // && 前後兩個條件要成立才可以執行
         if (this.edit && cdoc) {
           this.cs.updateCustomer(cdoc.id, result);

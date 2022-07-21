@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CustomerListComponent } from './customer/customer-list/customer-list.component';
 import { CustomerDetailComponent } from './customer/customer-detail/customer-detail.component';
 import { MemberListComponent } from './member/member-list/member-list.component';
+import { AA070312listComponent } from './aa070312-list/aa070312-list.component';
 
 const routes: Routes = [
   // 網址, redirectTo -> 轉向至
@@ -14,11 +15,13 @@ const routes: Routes = [
   { path: 'customer', component: CustomerListComponent },
   // 個別的列表
   { path: 'customer/:cid', component: CustomerDetailComponent },
-  { path: "member", component: MemberListComponent }
+  { path: "member", component: MemberListComponent },
+  { path: "aa070312-list", component: AA070312listComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
